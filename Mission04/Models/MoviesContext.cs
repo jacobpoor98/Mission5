@@ -13,9 +13,9 @@ namespace Mission04.Models
         public DbSet<ApplicationResponse> responses { get; set; }
         public DbSet<Category> Category { get; set; }
 
-        // the following seeds the data with 3 entries
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            // populates the category table with categories and category id's
             mb.Entity<Category>().HasData(
                 new Category { CategoryId = 1, CategoryName="Action/Adventure"},
                 new Category { CategoryId = 2, CategoryName="Comedy"},
@@ -26,7 +26,7 @@ namespace Mission04.Models
                 new Category { CategoryId = 7, CategoryName="Television"},
                 new Category { CategoryId = 8, CategoryName="VHS"}
             );
-
+            // populates a few entries into the responses table
             mb.Entity<ApplicationResponse>().HasData(
                 new ApplicationResponse
                 {

@@ -18,22 +18,26 @@
         </tr>
     </thead>
 
+    @*Generate a list of all the database entries*@
     <tbody>
         @foreach (var x in Model)
-            {
-                <tr>
-                    <td>@x.Category.CategoryName</td>
-                    <td>@x.Title</td>
-                    <td>@x.Year</td>
-                    <td>@x.Director</td>
-                    <td>@x.Rating</td>
-                    <td>@x.Edited</td>
-                    <td>@x.LentTo</td>
-                    <td>@x.Notes</td>
+        {
+            <tr>
+                @*This must be used to grab the category name from the category table
+            based on the category id*@
+                <td>@x.Category.CategoryName</td>
+                <td>@x.Title</td>
+                <td>@x.Year</td>
+                <td>@x.Director</td>
+                <td>@x.Rating</td>
+                <td>@x.Edited</td>
+                <td>@x.LentTo</td>
+                <td>@x.Notes</td>
 
-                    <td><a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.MovieID" >Edit</a></td>
-                    <td><a asp-controller="Home" asp-action="Delete" asp-route-movieid="@x.MovieID" >Delete</a></td>
-                </tr>
-            }
+                @* edit and delete buttons*@
+                <td><a asp-controller="Home" asp-action="Edit" asp-route-movieid="@x.MovieID">Edit</a></td>
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-movieid="@x.MovieID">Delete</a></td>
+            </tr>
+        }
     </tbody>
 </table>

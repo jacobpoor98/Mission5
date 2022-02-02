@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{DB19E82D-6488-4F78-9B0C-A8B153989844}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Mission04/Views/Home/Movies.cshtml">
+    <Files>
+      <File FileName="Mission04/Views/Home/Movies.cshtml" Line="15" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Mission04" expanded="True">
+            <Node name="Mission04" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="MyPodcasts.cshtml" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Mission04 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

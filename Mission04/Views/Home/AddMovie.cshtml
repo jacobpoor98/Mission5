@@ -10,10 +10,12 @@
 @*this acts as the form to grab all the contents. Those contents are packaged into
 a variable, ar, and handled via the controller*@
 <div style="display:flex; justify-content:center;">
+
     <form method="post">
         <label asp-for="CategoryId" style="width:80px;">Category</label>
-        @*I chose to include a drop down list for the categories*@
+
         <select asp-for="CategoryId" style="width:175px;">
+            @*This will draw a list of categories and conver the chosen category to a category id when stored*@
             <option value="">Select Category</option>
             @foreach (Category m in ViewBag.Categories)
             {
@@ -52,6 +54,7 @@ a variable, ar, and handled via the controller*@
 
         <button type="submit" style="width:255px;">Submit</button>
 
+        @*allows for error statements to be thrown*@
         <div asp-validation-summary="All">
         </div>
 

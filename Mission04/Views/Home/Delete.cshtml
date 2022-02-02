@@ -14,10 +14,12 @@
     <br />
 </div>
 
+@*This will provide them with the option to either proceed with deletion (submit)
+    or cancel (reroutes them back to the movies list page)*@
 <div style="display:flex; justify-content:center;">
     <form method="post" asp-controller="Home" asp-action="Delete">
         <button type="submit"
-           style="font: bold 20px Arial;
+                style="font: bold 20px Arial;
            text-decoration: none;
            background-color: #EEEEEE;
            color: #333333;
@@ -25,7 +27,9 @@
            border-top: 1px solid #CCCCCC;
            border-right: 1px solid #333333;
            border-bottom: 1px solid #333333;
-           border-left: 1px solid #CCCCCC">Delete</button>
+           border-left: 1px solid #CCCCCC">
+            Delete
+        </button>
 
         <a asp-controller="Home" asp-action="Movies"
            style="font: bold 20px Arial;
@@ -38,6 +42,8 @@
            border-bottom: 1px solid #333333;
            border-left: 1px solid #CCCCCC;">Cancel</a>
 
+        @*Stores the id of the movie selected to delete. Will be used if you
+        choose to delete*@
         <input type="hidden" asp-for="MovieID" />
     </form>
 </div>

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mission04.Models;
 
+// note that I removed unneeded pages such as privacy page
 namespace Mission04.Controllers
 {
     public class HomeController : Controller
@@ -61,6 +62,7 @@ namespace Mission04.Controllers
             }
         }
 
+        // provide a list of all movies (including category names from category table)
         public IActionResult Movies()
         {
             var movies = GenContext.responses
@@ -71,6 +73,7 @@ namespace Mission04.Controllers
             return View(movies);
         }
 
+        // call an edit function that reroutes them to a prefield add movie form
         [HttpGet]
         public IActionResult Edit(int movieid)
         {
@@ -81,6 +84,8 @@ namespace Mission04.Controllers
             return View("AddMovie", editMovie);
         }
 
+        // call back the movie list page once finished editing via 'submit'
+        // also passes the mv variable containing which record to edit
         [HttpPost]
         public IActionResult Edit(ApplicationResponse mv)
         {
@@ -89,6 +94,7 @@ namespace Mission04.Controllers
             return RedirectToAction("Movies");
         }
 
+        // call a delete confirmation page
         [HttpGet]
         public IActionResult Delete(int movieid)
         {
@@ -97,6 +103,8 @@ namespace Mission04.Controllers
             return View(deleteMovie);
         }
 
+        // call back the movie list pgae once finished deleting via 'delete'
+        // also passes the mv variable containing which record to delete
         [HttpPost]
         public IActionResult Delete(ApplicationResponse mv)
         {
