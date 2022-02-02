@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Add Movie";
+}
+
+@model Mission04.Models.ApplicationResponse
+
+<h3 style="display:flex; justify-content:center;">Add a movie to the database!</h3>
+<br />
+
+@*this acts as the form to grab all the contents. Those contents are packaged into
+a variable, ar, and handled via the controller*@
+<div style="display:flex; justify-content:center;">
+    <form method="post">
+        <label asp-for="CategoryId" style="width:80px;">Category</label>
+        @*I chose to include a drop down list for the categories*@
+        <select asp-for="CategoryId" style="width:175px;">
+            <option value="">Select Category</option>
+            @foreach (Category m in ViewBag.Categories)
+            {
+                <option value="@m.CategoryId">@m.CategoryName</option>
+            }
+        </select> <br />
+
+        <label asp-for="Title" style="width:80px;">Title</label>
+        <input asp-for="Title" style="width:175px;" /> <br />
+
+        <label asp-for="Year" style="width:80px;">Year</label>
+        <input asp-for="Year" style="width:175px;" /> <br />
+
+        <label asp-for="Director" style="width:80px;">Director</label>
+        <input asp-for="Director" style="width:175px;" /> <br />
+
+        <label asp-for="Rating" style="width:80px;">Rating</label>
+        <select asp-for="Rating" style="width:175px;">
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select> <br />
+
+        <label asp-for="Edited" style="width:80px;">Edited</label>
+        <select asp-for="Edited" style="width:175px;">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select> <br />
+
+        <label asp-for="LentTo" style="width:80px;">Lent To</label>
+        <input asp-for="LentTo" style="width:175px;" /> <br />
+
+        <label asp-for="Notes" style="width:80px;">Notes</label>
+        <textarea asp-for="Notes" style="width:175px;"></textarea> <br />
+
+        <button type="submit" style="width:255px;">Submit</button>
+
+        <div asp-validation-summary="All">
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,29 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="Mission04/Controllers/HomeController.cs" Line="26" Column="10" />
+      <File FileName="Mission04/Views/Home/AddMovie.cshtml" Line="39" Column="1" />
+      <File FileName="Mission04/Models/AddMovie.cs" Line="14" Column="40" />
+      <File FileName="Mission04/Models/MoviesContext.cs" Line="52" Column="18" />
+      <File FileName="Mission04/wwwroot/css/site.css" Line="84" Column="13" />
+      <File FileName="Mission04/Views/Home/Index.cshtml" Line="9" Column="52" />
+      <File FileName="Mission04/Views/Shared/_Layout.cshtml" Line="34" Column="67" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Mission04" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Mission04/Mission04.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Delete";
+}
+
+@model ApplicationResponse
+
+<div style="display:flex; justify-content:center;">
+    <h2>Confirm Deletion</h2>
+    <br />
+</div>
+
+<div style="display:flex; justify-content:center;">
+    <h3>Are you sure you would like to delete @Model.Title from the database?</h3>
+    <br />
+</div>
+
+<div style="display:flex; justify-content:center;">
+    <form method="post" asp-controller="Home" asp-action="Delete">
+        <button type="submit"
+           style="font: bold 20px Arial;
+           text-decoration: none;
+           background-color: #EEEEEE;
+           color: #333333;
+           padding: 8px 24px 8px 24px;
+           border-top: 1px solid #CCCCCC;
+           border-right: 1px solid #333333;
+           border-bottom: 1px solid #333333;
+           border-left: 1px solid #CCCCCC">Delete</button>
+
+        <a asp-controller="Home" asp-action="Movies"
+           style="font: bold 20px Arial;
+           text-decoration: none;
+           background-color: #EEEEEE;
+           color: #333333;
+           padding: 8px 24px 8px 24px;
+           border-top: 1px solid #CCCCCC;
+           border-right: 1px solid #333333;
+           border-bottom: 1px solid #333333;
+           border-left: 1px solid #CCCCCC;">Cancel</a>
+
+        <input type="hidden" asp-for="MovieID" />
+    </form>
+</div>
